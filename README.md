@@ -1,4 +1,4 @@
-# Mazda AI-Powered Data Pipeline POC
+# AI-Powered Data Platform POC
 
 An end-to-end AI-driven data warehouse built on Databricks Free Edition using Groq (Llama 3.3 70B) as the LLM agent and Databricks Genie as the conversational AI/BI layer. The agent profiles raw source data, designs the warehouse schema autonomously, builds a full medallion pipeline, and surfaces everything through natural language queries at zero cost.
 
