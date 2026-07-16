@@ -8,30 +8,7 @@ Most data pipelines are hardcoded. This one is not. The LLM agent receives raw m
 
 ## Architecture
 
-```
-9 Raw CSVs (Unity Catalog Volume)
-         |
-    BRONZE layer        workspace.mazda_bronze.*
-    9 tables, 2,913,337 rows — raw ingest, schema preserved
-         |
-    SILVER layer        workspace.mazda_silver.*
-    9 tables, 2,913,337 rows — typed, cleaned, FK-protected
-         |
-    DIMENSIONAL layer   workspace.mazda_dimensional.*
-    11 tables, 3,047,457 rows — LLM-designed star schema
-    4 facts + 6 dims + date spine, surrogate keys, SCD1/SCD2
-         |
-    GOLD layer          workspace.mazda_gold.*
-    6 tables, 856,286 rows — pre-joined aggregations
-         |
-    DATA PRODUCTS       workspace.mazda_products.*
-    6 products, 762,059 rows — named, versioned, self-describing
-         |
-    DATABRICKS GENIE    Natural language query interface
-<img width="494" height="440" alt="architecture" src="https://github.com/user-attachments/assets/55458176-7298-46ad-b33c-98c663d9f19e" />
-
-
-```
+![High Level Architecture](docs/architecture.png)
 
 ## Tech stack (100% free)
 
